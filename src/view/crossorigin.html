@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="preload" href="fonts/cicle_fina-webfont.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
+  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>Hello world! This is HTML5 Boilerplate.</p>
+<!-- “anonymous" 关键字说明不会通过 cookies，客户端 SSL 证书或 HTTP 认证交换用户凭据。-->
+<script src="https://example.com/example-framework.js"
+        crossorigin="anonymous"></script>
+<script>
+  var mediaQueryList = window.matchMedia("(max-width: 600px)");
+  var header = document.querySelector('header');
+
+  if(mediaQueryList.matches) {
+    header.style.backgroundImage = 'url(bg-image-narrow.png)';
+  } else {
+    header.style.backgroundImage = 'url(bg-image-wide.png)';
+  }
+</script>
+
+<!--脚本化与预加载-->
+<script>
+  var preloadLink = document.createElement("link");
+  preloadLink.href = "myscript.js";
+  preloadLink.rel = "preload";
+  preloadLink.as = "script";
+  document.head.appendChild(preloadLink);
+
+  //如果要对其加以执行，在需要的时候，你可以执行：
+
+  var preloadedScript = document.createElement("script");
+  preloadedScript.src = "myscript.js";
+  document.body.appendChild(preloadedScript);
+  //当你需要预加载一个脚本，但需要推迟到需要的时候才令其执行时，这种方式会特别有用。
+</script>
+
+</body>
+
+</html>

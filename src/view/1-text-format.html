@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>文本格式化</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>这里主要介绍文本格式化的标签用法</p>
+
+<b>这个文本是加粗的</b><br />
+<em>这个文本是强调的</em><br />
+<i>这个文本是斜体的</i><br />
+<small>这个文本是缩小的</small><br />
+这个文本包含<sub>下标</sub><br />
+这个文本包含<sup>上标</sup><br />
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+<abbr title="etcetera">etc.</abbr>
+<p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+
+<code>计算机输出</code>
+<br />
+<kbd>键盘输入</kbd>
+<br />
+<samp>计算机代码样本</samp>
+<br />
+<var>计算机变量</var>
+<br />
+
+<p>
+  <b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+
+<address>
+  <!--cite定义引用、引证-->
+  <cite>The View</cite><br>
+  Written by <a href="mailto:webmaster@example.com">Angela</a>.<br>
+  Visit us at:<br>
+  Example.com<br>
+  Box 564, Disneyland<br>
+  <mark>USA</mark>
+</address>
+
+<p><bdo dir="ltr">该段落文字从左到右显示。</bdo></p>
+<p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>
+
+<p>&lt;q&gt;标记一个短的引用。浏览器经常会在这种引用的周围插入引号。</p>
+<p>WWF's goal is to:
+  <q>Build a future where people live in harmony with nature.</q>
+  We hope they succeed.</p>
+
+<p>&lt;blockquote&gt; 标签定义摘自另一个源的块引用。浏览器通常会对 &lt;blockquote&gt; 元素进行缩进。-->
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+  For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+
+<p>HTML &lt;bdi&gt; 元素 (双向隔离元素) 会隔离可能以不同方向进行格式化的外部文本。</p>
+<ul>
+  <li>用户 <bdi>hrefs</bdi>: 60 分</li>
+  <li>用户 <bdi>jdoe</bdi>: 80 分</li>
+  <li>用户 <bdi>إيان</bdi>: 90 分</li>
+</ul>
+
+<pre>
+&lt;ruby&gt; 标签定义 ruby 注释（中文注音或字符）。
+在东亚使用，显示的是东亚字符的发音。
+将 &lt;ruby&gt; 标签与 &lt;rt&gt; 和 &lt;rp&gt; 标签一起使用：
+&lt;ruby&gt; 元素由一个或多个需要解释/发音的字符和一个提供该信息的 &lt;rt&gt; 元素组成，
+  还包括可选的 &lt;rp&gt; 元素，定义当浏览器不支持 "ruby" 元素时显示的内容。
+</pre>
+<ruby>
+  汉 <rp>(</rp><rt>Han</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+</ruby>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>多媒体</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    #video1:-webkit-full-screen {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>HTML 多媒体</p>
+
+<object width="400" height="400" data="http://www.runoob.com/try/demo_source/helloworld.swf">
+  <param name="autoplay" value="true">
+</object>
+<br>
+<audio controls>
+  <source src="http://www.runoob.com/try/demo_source/horse.ogg" type="audio/ogg">
+  <source src="http://www.runoob.com/try/demo_source/horse.mp3" type="audio/mpeg">
+  您的浏览器不支持 audio 元素。
+  <embed src="http://www.runoob.com/try/demo_source/horse.mp3">
+</audio>
+<br>
+<video width="320" height="240"
+       poster="http://www.runoob.com/try/demo_source/images/w3html5.gif"
+       controls loop muted>
+  <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
+  <source src="http://www.runoob.com/try/demo_source/movie.ogg" type="video/ogg">
+  您的浏览器不支持 HTML5 video 标签。
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en"
+         label="English">
+  <track src="subtitles_no.vtt" kind="subtitles" srclang="no"
+         label="Norwegian">
+</video>
+<br>
+
+<!--preload 属性规定是否在页面加载后载入视频。如果设置了 autoplay 属性，则忽略该属性。-->
+<div style="text-align:center">
+  <button onclick="playPause()">播放/暂停</button>
+  <button onclick="makeBig()">放大</button>
+  <button onclick="makeSmall()">缩小</button>
+  <button onclick="makeNormal()">普通</button>
+  <br>
+  <video id="video1" width="420" preload="none">
+    <source src="http://www.runoob.com/try/demo_source/mov_bbb.mp4" type="video/mp4">
+    <source src="http://www.runoob.com/try/demo_source/mov_bbb.ogg" type="video/ogg">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
+</div>
+
+<script>
+  var myVideo = document.getElementById("video1");
+
+  function playPause() {
+    if (myVideo.paused)
+      myVideo.play();
+    else
+      myVideo.pause();
+  }
+
+  function makeBig() {
+    myVideo.width = 560;
+    if (myVideo.requestFullscreen) {
+      myVideo.requestFullscreen();
+    }
+  }
+
+  function makeSmall() {
+    myVideo.width = 320;
+  }
+
+  function makeNormal() {
+    myVideo.width = 420;
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  }, false);
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+</script>
+
+</body>
+
+</html>

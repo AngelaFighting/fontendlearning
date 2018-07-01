@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibilityState</title>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<h4>visibilityState</h4>
+<p>
+    这是一个HTML5新提供的一个api，主要作用就是记录当前标签页在浏览器中的激活状态。
+    所谓“激活状态”指的是当前标签是否正在被用户浏览。
+</p>
+<h4>应用场景</h4>
+<p>
+    监控用户行为，当用户的视角不在当前页面时，暂停加载广告，幻灯片、停止加载视频、
+    开始加载小动画等。减少对用户宽带的占用，减少服务器压力，节省用户内存，
+    以及到达更好的播放效果。
+</p>
+
+<video id="video1" width="420" controls>
+    <source src="http://www.runoob.com/try/demo_source/mov_bbb.mp4" type="video/mp4">
+    <source src="http://www.runoob.com/try/demo_source/mov_bbb.ogg" type="video/ogg">
+    您的浏览器不支持 HTML5 video 标签。
+</video>
+<script>
+    var myVideo = document.getElementById("video1");
+    myVideo.play();
+    document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState == "visible") {
+            //do something
+            //继续视频播放
+            myVideo.play();
+        }
+        if (document.visibilityState == "hidden") {
+            //do something else
+            //暂停视频播放
+            myVideo.pause();
+        }
+    });
+
+</script>
+</body>
+</html>

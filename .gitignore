@@ -1,0 +1,4 @@
+# .gitignore 用于忽略你不想提交到Git上的文件或目录
+
+node_modules
+dist

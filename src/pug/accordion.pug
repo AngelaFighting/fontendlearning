@@ -1,0 +1,24 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title 纯CSS实现手风琴效果
+        link(rel='stylesheet', type='text/css', href='../css/accordion.css')
+    body
+        .accordian
+            -
+                var data=[
+                    {'link_title':'KungFu Panda', 'link_img':'http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg'},
+                    {'link_title':'Toy Story 2', 'link_img':'http://thecodeplayer.com/uploads/media/40Ly3VB.jpg'},
+                    {'link_title':'Wall-E', 'link_img':'http://thecodeplayer.com/uploads/media/00kih8g.jpg'},
+                    {'link_title':'Up', 'link_img':'http://thecodeplayer.com/uploads/media/8k3N3EL.jpg'},
+                    {'link_title':'Cars 2', 'link_img':'http://thecodeplayer.com/uploads/media/2rT2vdx.jpg'}
+                ]
+            ul
+                each item in data
+                    li
+                        .image_title
+                            a(href='#') #{item.link_title}
+                        a(href='#')
+                            img(src=item.link_img)
+

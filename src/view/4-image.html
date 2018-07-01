@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>图像</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+<img src="http://www.runoob.com/try/demo_source/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="#">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="#">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="#">
+</map>
+
+<p>The Pulpit Rock is a massive cliff 604 metres (1982 feet) above Lysefjorden, opposite the Kjerag plateau, in Forsand, Ryfylke, Norway. The top of the cliff is approximately 25 by 25 metres (82 by 82 feet) square and almost flat, and is a famous tourist attraction in Norway.</p>
+&lt;figure&gt; 标签规定独立的流内容（图像、图表、照片、代码等等）。
+&lt;figure&gt; 元素的内容应该与主内容相关，同时元素的位置相对于主内容是独立的。如果被删除，则不应对文档流产生影响。
+<figure>
+  <img src="http://www.runoob.com/try/demo_source/img_pulpit.jpg" tppabs="http://w3schools.com/tags/img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+  <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+</figure>
+
+<img srcset="http://www.runoob.com/try/demo_source/img_pulpit.jpg 320w,
+             http://www.runoob.com/try/demo_source/img_pulpit.jpg 480w,
+             http://www.runoob.com/try/demo_source/img_pulpit.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="http://www.runoob.com/try/demo_source/img_pulpit.jpg" alt="Elva dressed as a fairy">
+<pre>
+有了这些属性，浏览器会：
+1.查看设备宽度
+2.检查sizes列表中哪个媒体条件是第一个为真
+3.查看给予该媒体查询的槽大小
+4.加载srcset列表中引用的最接近所选的槽大小的图像
+</pre>
+
+<script>
+  var img = new Image,
+    canvas = document.createElement("canvas"),
+    ctx = canvas.getContext("2d"),
+    src = "../img/0.jpg"; // insert image url here
+
+  img.crossOrigin = "Anonymous";
+
+  img.onload = function() {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage( img, 0, 0 );
+    localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
+  }
+  img.src = src;
+  // make sure the load event fires for cached images too
+  if ( img.complete || img.complete === undefined ) {
+    img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+    img.src = src;
+  }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.container{
+	column-width:230px;
+	column-gap:5px;
+	-webkit-column-width: 230px; /* Chrome, Safari, Opera */
+	-webkit-column-gap:5px;
+	-moz-column-width:230px;/* Firefox */
+	-moz-column-gap:5px;
+	margin:10px auto;
+}
+.box{
+	width:230px;
+	margin:5px 0;
+}

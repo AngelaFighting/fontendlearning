@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>服务器发送事件(Server-Sent Events)</title>
+</head>
+<body>
+<h1>获取服务端更新数据</h1>
+<div id="result"></div>
+
+<script>
+  if (typeof(EventSource) !== "undefined") {
+    var source = new EventSource("http://www.runoob.com/try/demo_source/demo_sse.php");
+    source.onopen = function (event) {
+      document.getElementById("result").innerHTML += "连接被打开" + "<br>";
+    };
+    source.onmessage = function (event) {
+      document.getElementById("result").innerHTML += event.data + "<br>";
+    };
+    source.onerror = function (event) {
+      document.getElementById("result").innerHTML += "发送错误：" + event.data + "<br>";
+    }
+  }
+  else {
+    document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 server-sent 事件...";
+  }
+</script>
+</body>
+</html>

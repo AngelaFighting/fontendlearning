@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>表单</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>这里主要介绍表单的使用。</p>
+<form name="login-form" autocomplete="off" target="_blank"
+      novalidate="novalidate" method="post"
+      enctype="multipart/form-data" accept-charset="UTF-8"
+      action="#"
+      oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  <fieldset>
+    <legend>Personalia:</legend>
+    First name: <input type="text" name="fname" autofocus><br>
+    Last name: <input type="text" name="lname"><br>
+    <label for="male">Male</label>
+    <input type="radio" name="sex" id="male" value="male">
+    <label for="female">Female</label>
+    <input type="radio" name="sex" id="female" value="female"><br>
+    邮箱：<input type="email"><br>
+    密码：<input type="password"><br>
+    喜欢的颜色：<input type="color"><br>
+    <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+    <input type="number" name="age" id="age" min="1" max="10" step="2"><br>
+    <input type="range" name="beans" id="beans" min="0" max="500" step="10"><br>
+    <input type="time"><br>
+    <input type="week"><br>
+    <input type="month"><br>
+    <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate"><br>
+    <input type="datetime-local"><br>
+    <input type="file" name="file" id="file" accept="image/*" multiple><br>
+    0
+    <input type="range" id="a" value="50">100
+    +<input type="number" id="b" value="50">
+    =
+    <output name="x" for="a b"></output>
+    <br>
+    <select>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi" selected>Audi</option>
+    </select><br>
+
+    <select size="2" multiple>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select><br>
+
+    <select>
+      <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+      </optgroup>
+      <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+    </select>
+    <br>
+    省份：<input list="provinces">
+    <datalist id="provinces">
+      <option value="广东">
+      <option value="福建">
+      <option value="山东">
+      <option value="四川">
+      <option value="湖南">
+    </datalist>
+    <br>
+    <!--datalist兼容低版本的浏览器-->
+    <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+    <input type="text" id="myFruit" name="fruit" list="fruitList"><br>
+    <input type="text" id="t1" name="fruit" list="suggestion" required
+           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <datalist id="fruitList">
+      <label for="suggestion">or pick a fruit</label>
+      <select id="suggestion" name="altFruit">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+      </select>
+    </datalist>
+    <br>
+
+    <progress max="100" value="75">75/100</progress>
+    <br>
+    <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+    <br>
+    <!--所有实现<meter>元素的浏览器都使用这些值来改变米尺的颜色。
+    如果当前值位于该范围的优先部分，则该条是绿色的。
+    如果当前值位于该范围的平均部分，则该条是黄色的。
+    如果当前值处于最糟糕的范围，则该条是红色的。-->
+    <textarea rows="10" cols="30" maxlength="200"
+              name="description" placeholder="请输入简介">
+    </textarea>
+  </fieldset>
+</form>
+</body>
+
+</html>
