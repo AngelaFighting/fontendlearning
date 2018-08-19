@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/dist/js/webworkers.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/js/jquery.min.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/js/camera.js" />
+        <item url="file://$PROJECT_DIR$/dist/dist/js/modernizr.min.js" />
+        <item url="file://$PROJECT_DIR$/dist/gulpfile.babel.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/modernizr.js" />
+      <root url="file://$PROJECT_DIR$/dist/modernizr.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/js/camera.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/js/webworkers.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/js/camera.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/js/webworkers.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/js/webworkers.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/js/jquery.min.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/js/camera.js" />
+      <root url="file://$PROJECT_DIR$/dist/dist/js/modernizr.min.js" />
+      <root url="file://$PROJECT_DIR$/dist/gulpfile.babel.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

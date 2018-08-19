@@ -1,0 +1,44 @@
+.accordian {
+  width: 850px;
+  margin: 100px auto;
+}
+
+.accordian ul li {
+  float: left;
+  list-style: none;
+  width: 160px;
+  transition: all 2s;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+  border-left-width: 2px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.accordian ul li .image_title {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-indent: 2em;
+  line-height: 50px;
+  bottom: 0px;
+  left: 0;
+}
+
+.accordian ul li .image_title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.accordian ul:hover li {
+  width: 32px;
+  -webkit-filter: grayscale(0.8);
+  filter: grayscale(0.8);
+}
+
+.accordian ul li:hover {
+  width: 640px;
+  -webkit-filter: grayscale(0) hue-rotate(300deg);
+  filter: grayscale(0) hue-rotate(300deg);
+}
